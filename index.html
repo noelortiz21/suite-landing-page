@@ -24,13 +24,15 @@
     <div class="padding-container">
       <div class="grid-container">
         <nav>
-          <img class="nav-logo" src="assets/logo.svg" alt=""  />
+          <picture class="nav-logo-wrapper">
+            <img class="nav-logo" src="assets/logo.svg" alt=""  /> 
+          </picture>
           <a class="btn btn-light" href=""> Request Beta Access </a>
         </nav>
 
         <header class="header">
-          <article class="header header-card">
-            <h1 class="header header-title">
+          <article class="header-card">
+            <h1 class="header-title">
               A <strong>super solution</strong> for your
               <strong>business.</strong>
             </h1>
@@ -41,6 +43,7 @@
             <a class="btn btn-dark" href=""> Request Beta Access </a>
           </article>
           <picture class="phone-wrapper">
+            <source media="(min-width:767px)" srcset="assets/image-hero-portrait@2x.png">
             <img class="hero-img" src="assets/image-hero-portrait.png" alt="" class="phone" />
           </picture>
         </header>
@@ -64,25 +67,29 @@
         <section class="light-bg-container">
           <div class="dark-bg-container">
             <picture>
-              <img src="" alt="" />
+              <img class="jeremy" src="assets/image-jeremy-small.png" alt="" />
             </picture>
-            <h3>It just <strong>works.</strong></h3>
-            <p>
-              “I really like how it is an all-in-one solution that handle many
-              of the tasks that you would normally need separate tools to do the
-              same job. This thing is a miracle worker.”
-            </p>
-            <p> Jeremy Robinson </p>
-            <p>CMO, Fylo</p>
+            <div class="flex-card">
+              <h3>It just <strong>works.</strong></h3>
+              <p class="quote">
+                “I really like how it is an all-in-one solution that handle many
+                of the tasks that you would normally need separate tools to do the
+                same job. This thing is a miracle worker.”
+              </p>
+              <div class="cmo-group">
+                <p class="name"> Jeremy Robinson </p>
+                <p class="details">CMO, Fylo</p> 
+              </div>
+            </div>
           </div>
 
-          <footer class="flex-container">
-            <p><strong>suite</strong></p>
+          <footer class="footer-container">
+            <img class="footer-logo" src="assets/logo.svg" alt="" >
             <p>Copyright - Suite</p>
-            <div class="icons-flex-container">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
+            <div class="icons-flex">
+              <img src="assets/icon-facebook.svg" alt="">
+              <img src="assets/icon-twitter.svg" alt="">
+              <img src="assets/icon-instagram.svg" alt="">
             </div>
           </footer>
         </section>
