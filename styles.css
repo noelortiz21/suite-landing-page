@@ -71,7 +71,7 @@
     .nav-logo{object-fit: cover;}
     .header-card >h1{margin-bottom:2rem;}
     .header-card >p{margin-bottom:2rem;}
-    .header-card{margin-bottom: 3.48rem;}
+    .header-card{margin-bottom: 3.48rem;max-width: 450px; }
     .header{margin-bottom:3.48rem;}
     
     .hero-img{width: 100%; height: 15rem; object-fit: cover;border-radius: 0.9375rem;
@@ -114,15 +114,14 @@ margin-bottom: -7.31rem;
     .footer-container>p{ font-size: 0.9375rem; line-height: 2rem; letter-spacing: 0.00519rem;    }
     .icons-flex{ display: flex; justify-content: space-between; width: 7.25rem; height: 1.25rem; }
 
-    @media(min-width: 650px){
+    @media(min-width: 712px){
         .padding-container{padding-top: 2.5rem;padding-right: 2.5rem;padding-left: 2.44rem;}
         .stats-container{flex-direction: row;justify-content: space-around;margin-bottom:17.06rem;}
         .nav-logo-wrapper{display: flex;}
-        .nav-logo{align-self: center;}
-        
+        .nav-logo{align-self: center;} 
             
-        .header{position: relative;}
-        .header-card{margin-bottom: 8rem;width: 32rem;}
+        .header{position: relative;;}
+        .header-card{margin-bottom: 8rem;width: 32rem;max-width: revert;}
         .header-card >h1{font-size: 3.5rem;line-height: 4rem;margin-bottom: 2.5rem;letter-spacing: -0.04863rem;padding-top: 6rem;font-weight: 400;}
         .header-card >p{width: 21.875rem;margin-bottom: 2.5rem;}
         .header-title > strong{font-weight: 700;}
@@ -131,8 +130,47 @@ margin-bottom: -7.31rem;
         .light-bg-container{margin-right: -2.5rem;margin-left: -2.44rem;} 
         .dark-bg-container{margin-right: 2.5rem;margin-left: 2.44rem;} 
         .flex-card{ gap: 2.5rem;padding-inline:3.63rem; }
-        /* .jeremy{position: relative;margin-left: auto;margin-right: auto;transform: translateY(-50%);margin-bottom:-7.31rem;} */
+
+         .footer-container{display: flex;flex-direction: row;margin-left: 2.44rem;margin-right: 2.5rem;justify-content: space-between;}
+    }
+    @media(min-width: 880px){
+        .header{max-width: 940px; margin-inline: auto;}
+        }
+    
+    @media(min-width: 1200px){
+        .padding-container{padding-top: 3.12rem;padding-right: calc(10.25rem*.3);padding-left: calc(10.44rem*.3);}
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "nav-logo nav-logo nav-logo nav-logo"
+            "header-card header-card header-card stats-container"
+            "light light light light";
+        }
+        nav{grid-area: nav-logo;}
+        .phone-wrapper{width: 21.875rem;height: 37.5rem;}
+        .hero-img{ width: 100%;height: 37.5rem; object-fit: cover;position: relative;z-index: -1;}
+        .header{grid-area: header-card;margin-bottom: revert;max-width: revert;margin-inline:revert ;}
+        .header-card{width: 39.6875rem;margin-bottom: revert;}
+        .header-card >h1{font-size: 4.5rem;}
+        .header-card >p{width: 19rem;margin-bottom: 3.25rem;line-height: 2;}
+        .stats-container{grid-area: stats-container;flex-direction: column;justify-content: flex-end;justify-content: center;margin-bottom: revert;}
+        .light-bg-container{grid-area: light;margin-right: -10.25rem;margin-left: -10.44rem;transform: translateY(50%);background: var(--white);}
+        .dark-bg-container{display: flex;justify-content: space-around;margin-right: 10.25rem;margin-left: 10.44rem;}
+        .flex-card{width: 21.875rem;padding-inline:revert;text-align: left;padding-block: 5.5rem;}
+        .flex-card>h3{font-size:3rem;}
+        .quote{
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.1875rem; /* 175% */
+            letter-spacing: 0.00625rem;font-size: 1.25rem  ;}
+        .jeremy{transform: translateY(-7.4%);}
+        /* .footer-container{background: var(--pink);padding-top: calc(34.0625rem/2);position: relative;z-index: -1;margin-left: -39.04rem;margin-right: 40rem;} */
         
 
-        .footer-container{display: flex;flex-direction: row;margin-left: 2.44rem;margin-right: 2.5rem;justify-content: space-between;}
+    }
+    @media (min-width: 1440px){
+        .padding-container{padding-right: 10.25rem;padding-left:10.44rem;}
+
     }
